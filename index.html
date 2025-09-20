@@ -148,65 +148,61 @@ https://templatemo.com/tm-595-3d-coverflow
     
     <style>
               /* GRID con 4 columnas en horizontal */
-    .about-main {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Siempre 4 columnas */
-      gap: 15px;
-      padding: 20px;
-    }
+   /* GRID con 4 columnas en PC */
+.about-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Siempre 4 columnas en PC */
+  gap: 15px;
+  padding: 20px;
+}
 
-    .about-main .cover img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
+.about-main .cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
 
-    .about-main .cover img:hover {
-      transform: scale(1.05);
-    }
+.about-main .cover img:hover {
+  transform: scale(1.05);
+}
 
-    /* POPUP */
-    .popup {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
 
-    .popup img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
-    }
+.popup img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
 
-    .popup span {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 40px;
-      font-weight: bold;
-      color: #fff;
-      cursor: pointer;
-    }
+.popup span {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
 
-    /* Responsive: en pantallas pequeñas que se adapten */
-    @media (max-width: 900px) {
-      .about-main {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+/* Responsive: en pantallas pequeñas que se adapten de 2 en 2 */
+@media (max-width: 900px) {
+  .about-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    @media (max-width: 500px) {
-      .about-main {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
 <body>
