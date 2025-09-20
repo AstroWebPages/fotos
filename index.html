@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David - Fotos</title>
+    <link href="astroweb.css" rel="stylesheet">
+<!--
+
+TemplateMo 595 3d coverflow
+
+https://templatemo.com/tm-595-3d-coverflow
+
+-->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="#home" class="logo-container">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2f34ce;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(-15 87.5 50)" />
+                    <rect x="35" y="15" width="15" height="70" fill="url(#grad1)" />
+                    <rect x="60" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(15 67.5 50)" />
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
+                </svg>
+            </div>
+            <div class="logo-text">David - Fotos</div>
+
+            
+
+
+
+
+        </a>
+        
+
+        <nav class="main-menu" id="mainMenu">
+            <a href="#home" class="menu-item active">Inicio</a>
+            <a href="#about" class="menu-item">Fotos</a>
+            <a href="#contact" class="menu-item">Contacto</a>
+            <a href="https://astroweb.store/" target="_blank" rel="noopener noreferrer" class="menu-item external">ᗩᔕ༒尺۝</a>
+        </nav>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+<!-- Botón de cambio de tema -->
+<button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+  <!-- Ícono Luna -->
+  <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z"/>
+  </svg>
+  <!-- Ícono Sol -->
+  <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 4V2m0 20v-2m8-8h2M2 12h2m15.36 6.36l1.42 1.42M4.22 4.22l1.42 1.42m0 12.72L4.22 19.78M19.78 4.22l-1.42 1.42"/>
+    <circle cx="12" cy="12" r="5"/>
+  </svg>
+</button>
+
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="coverflow-wrapper">
+            <div class="info">
+                <h2 id="current-title">Mountain Landscape</h2>
+                <p id="current-description">Majestic peaks covered in snow during golden hour</p>
+            </div>
+
+            <div class="coverflow-container" tabindex="0">
+                <div class="coverflow" id="coverflow">
+                    <div class="coverflow-item" data-index="0">
+                        <div class="cover image-loading">
+                            <img src="images/mountain-landscape.jpg" alt="Mountain Landscape" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="1">
+                        <div class="cover image-loading">
+                            <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="2">
+                        <div class="cover image-loading">
+                            <img src="images/serene-water-mirroring.jpg" alt="Lake Reflection" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="3">
+                        <div class="cover image-loading">
+                            <img src="images/ocean-sunset-golden-hour.jpg" alt="Ocean Sunset" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="4">
+                        <div class="cover image-loading">
+                            <img src="images/rolling-sand-dunes.jpg" alt="Desert Dunes" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="5">
+                        <div class="cover image-loading">
+                            <img src="images/starry-night.jpg" alt="Starry Night" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="6">
+                        <div class="cover image-loading">
+                            <img src="images/cascading-waterfall.jpg" alt="Waterfall" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                </div>
+
+                <button class="nav-button prev" onclick="navigate(-1)">‹</button>
+                <button class="nav-button next" onclick="navigate(1)">›</button>
+
+                <div class="dots-container" id="dots"></div>
+                
+                <!-- Play/Pause Button -->
+                <button class="play-pause-button" id="playPauseBtn" onclick="toggleAutoplay()">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon" style="display: none;">❚❚</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>Fotografías</h2>
+                <p>todas mis fotografías</p>
+            </div>
+    
+    <style>
+              /* GRID con 4 columnas en horizontal */
+    .about-main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Siempre 4 columnas */
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .about-main .cover img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .about-main .cover img:hover {
+      transform: scale(1.05);
+    }
+
+    /* POPUP */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    .popup span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Responsive: en pantallas pequeñas que se adapten */
+    @media (max-width: 900px) {
+      .about-main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .about-main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="about-main">
+  <div class="cover">
+    <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+  </div>
+  <div class="cover">
+    <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+  </div>
+  <div class="cover">
+    <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+  </div>
+  <div class="cover">
+    <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+  </div>
+  <div class="cover">
+    <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+  </div>
+  <div class="cover">
+    <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+  </div>
+  <div class="cover">
+    <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+  </div>
+  <div class="cover">
+    <img src="images/forest-path.jpg" alt="Forest Path" loading="lazy">
+  </div>
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <span id="close">&times;</span>
+  <img id="popup-img" src="" alt="Imagen ampliada">
+</div>
+
+<script>
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+  const closeBtn = document.getElementById("close");
+
+  document.querySelectorAll(".about-main .cover img").forEach(img => {
+    img.addEventListener("click", () => {
+      popup.style.display = "flex";
+      popupImg.src = img.src;
+      popupImg.alt = img.alt;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+</script>
+
+
+
+    </div>
+</section>
+                
+               
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                © 2025 3D Coverflow. All rights reserved. | Designed by <a href="https://templatemo.com" target="_blank" rel="noopener noreferrer">TemplateMo</a>
+            </div>
+            <div class="footer-links">
+                <a href="#privacy" onclick="event.preventDefault(); alert('Privacy Policy page would go here');">Privacy Policy</a>
+                <a href="#terms" onclick="event.preventDefault(); alert('Terms of Service page would go here');">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <span>↑</span>
+    </div>
+
+
+
+<script>
+// Botón y root
+const themeToggle = document.getElementById("themeToggle");
+const rootElement = document.documentElement;
+
+// Guardar preferencia en localStorage
+if (localStorage.getItem("theme") === "light") {
+  rootElement.setAttribute("data-theme", "light");
+}
+
+// Toggle del tema
+themeToggle.addEventListener("click", () => {
+  if (rootElement.getAttribute("data-theme") === "light") {
+    rootElement.removeAttribute("data-theme");
+    localStorage.setItem("theme", "dark");
+  } else {
+    rootElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+  }
+});
+</script>
+
+
+<script src="astroweb-script.js"></script>
+
+</body>
+</html>
